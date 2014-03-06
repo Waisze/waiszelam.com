@@ -1,0 +1,187 @@
+html {
+	width:100%;
+	height:100%;
+}
+
+.clearFloat {
+	clear: both;
+}
+
+/*Color palette e0bb36 f27853 e2e6d8 c4c72c 3a9cb5 78138f*/
+/*h
+	http://design-seeds.com/index.php/home/entry/plated-hues1
+*/
+body{
+	color: #453524;
+	font-family: "Roboto Slab", sans-serif;
+	margin: auto;
+	width:100%;
+	height:100%;
+	background: #e2e5d8;
+	background: url('images/square_bg.png');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: bold;
+}
+
+header {
+	text-align: center;
+	margin: 0px auto;
+	padding: 0 0 10px 0;
+	background: rgba(58,156,181,0.8);
+	background-image: url('images/square_bg.png');
+	border-bottom: 1px solid #4d4d4d;
+	cursor: pointer;
+}
+
+.headerBar {
+	width:100%;
+	height: 8px;
+	background-image: url('images/blackStripe.jpg');
+}
+
+header img {
+	width: 150px;
+}
+header h1{
+	font-size: 58px;
+	line-height: 56px;
+	margin-top: 10px;
+	padding-top: 15px;
+	margin: 0;
+	color: #4d4d4d;
+	font-family: "Satisfy";
+	//-webkit-text-stroke: 0.2px #ffffff;
+
+}
+
+header h1:after {
+	background-image: url('images/square_bg.png');
+	opacity:0.15;
+}
+
+header .slogan {
+	font-size: 14px;
+	color: #FFF;
+
+	//line-height: 34px;
+	//background: rgb(262,190,63);
+}
+
+.main-wrapper {
+	margin: 0;
+	width: 100%;
+}
+
+.choose{
+	margin-top: 50px;
+}
+
+.buttonContainer {
+	width:100%;
+	max-width:1024px;
+	margin: 0 auto;
+}
+	
+	.buttonContainer .button {
+		width:33.3333%;
+		float:left;
+	}
+
+	.buttonAdjust {
+		text-align: center;
+		margin-right: 10px;
+		margin-bottom:10px;
+		border: 1px solid #000;
+		height: 125px;
+		line-height: 41px;
+		border-radius: 10px;
+		padding-top: 30px;
+		font-weight:bold;
+		transition:0.3s;
+	}
+
+		.buttonAdjust:hover {
+			background:rgba(205,205,205,0.2);
+		}
+
+div .pick-category > form > button {
+
+}
+
+.events {
+	max-width:500px;
+	width: 100%;
+	height: 300px;
+	margin: auto;
+	margin-bottom: 200px;
+}
+
+	.events .popupTitle {
+		font-size: 20px;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.events .container {
+		border: 5px solid #000;
+		border-radius: 10px;
+	}
+
+	.events .picture img{
+		margin: 10px;
+	}
+
+	.events .eventTitle {
+		margin: 10px;
+		font-size: 20px;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.events .description {
+		margin: 10px;
+		margin-bottom:0;
+		font-size: 14px; 
+		color: #000;
+		max-height: 200px;
+		overflow: hidden;
+	}
+
+		#showMore, #showLess {
+			margin: 10px;
+			float:right;
+			font-size: 12px;
+			color:blue;
+		}
+
+	#selectEvent, #showNew {
+		float:left;
+		width:40%;
+		margin: 10px 0;
+		text-align:center;
+		line-height: 40px;
+		font-weight: bold;
+		height: 40px;
+		border: 3px solid #000;
+		border-radius: 10px;
+		font-size: 18px;
+		color: #000;
+		cursor:pointer;
+		text-decoration: none;
+	}
+
+	#showNew {
+		float:right;
+	}
+
+		#selectEvent:hover, #showNew:hover {
+			background:rgba(205,205,205,0.2);
+		}
