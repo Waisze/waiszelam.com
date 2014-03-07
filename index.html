@@ -27,14 +27,16 @@
 		<div class="main-wrapper">
 								
 			<header>
-				<div class="logo" onclick="scrollToPage('0')"><b>W</b>AISZE <b>L</b>AM</div>
+				<div class="headerContainer">
+					<div class="logo" onclick="scrollToPage('0')"><b>W</b>AISZE <b>L</b>AM</div>
 
-				<ul class="navContainer">
-					<li class="navItem" id="navItem2" onclick="scrollToPage('100')">About Me</li>
-					<li class="navItem" id="navItem3" onclick="scrollToPage('200')">Skill Set</li>
-					<li class="navItem" id="navItem4" onclick="scrollToPage('300')">Contact</li>
-				</ul>
-				<div class="clearFloat"></div>
+					<ul class="navContainer">
+						<li class="navItem" id="navItem2" onclick="scrollToPage('100')">About Me</li>
+						<li class="navItem" id="navItem3" onclick="scrollToPage('200')">Skill Set</li>
+						<li class="navItem" id="navItem4" onclick="scrollToPage('300')">Contact</li>
+					</ul>
+					<div class="clearFloat"></div>
+				</div>
 			</header>
 
 			<div class="content">
@@ -59,9 +61,15 @@
 
 
 					</li>
-					<li class="page" id="page2" style="left:100%"></li>
-					<li class="page" id="page3" style="left:200%"></li>
-					<li class="page" id="page4" style="left:300%"></li>
+					<li class="page" id="page2" style="left:100%">
+						<div class="contentContainer"></div>
+					</li>
+					<li class="page" id="page3" style="left:200%">
+						<div class="contentContainer"></div>
+					</li>
+					<li class="page" id="page4" style="left:300%">
+						<div class="contentContainer"></div>
+					</li>
 					<div class="clearFloat"></div>
 				</ul>
 			</div>

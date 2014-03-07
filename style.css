@@ -59,7 +59,7 @@ html {
 .contentContainer { 
 	position: relative; 
 	width: 100%;
-	height: 100%;
+	height: 90vh;
 	padding-top: 100px;
 }
 
@@ -86,7 +86,7 @@ html {
 /*Main Styling*/
 body {
 	font-family: "Roboto Slab", sans-serif;
-	overflow:hidden;
+	overflow-x:hidden;
 
 	/*Disable highlighting with this*/
 	//width:100%;
@@ -113,6 +113,12 @@ header {
 	background:rgba(93,93,93,0.8);
 	z-index: 0;
 }
+	
+	.headerContainer {
+		max-width:1024px;
+		margin: 0 auto;
+	}
+
 	header .logo {
 		float:left;
 		color: #FFFFFF;
@@ -163,7 +169,7 @@ header {
 	.page {
 		position:absolute;
 		width: 100%;
-		height: 1000px;
+		height: auto;
 		z-index:-1;
 		list-style: none;
 		transition:2s;
@@ -215,7 +221,7 @@ header {
 	#page1 .picture img {
 		width:180px;
 		height:180px;
-		border: 5px solid #4d4d4d;
+		//border: 5px solid #4d4d4d;
 		border-radius: 20px;
 	}
 
@@ -236,6 +242,7 @@ header {
 
 #page1 .description {
 	text-align: center;
+	margin-bottom:100px;
 }
 
 #page1 .description p {
@@ -250,6 +257,7 @@ header {
 	#page1 .description a {
 		width: 100%;
 		font-size: 20px;
+		font-weight: bold;
 	}
 
 footer {
@@ -261,7 +269,7 @@ footer {
 	background:rgba(93,93,93,0.8);
 }
 
-@media(max-width: 800px) {
+@media(max-width: 600px) {
 	header {
 		height: 80px;
 	} 
@@ -291,6 +299,21 @@ footer {
 		list-style: none;
 		margin: 28px 0 0 15px;
 		padding-right: 10px;
+	}
+
+	#page1 .picture {
+		margin-top:30px;
+	}
+
+	#page1 .name {
+		font-size:60px;
+	}
+
+	#page1 .description p {
+		width: 300px;
+		margin: 0 auto;
+		margin-top:60px;
+		margin-bottom:30px;
 	}
 
 }
