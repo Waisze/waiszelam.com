@@ -54,29 +54,54 @@ html {
 	clear: both;
 }
 
-/*Color palette e0bb36 f27853 e2e6d8 c4c72c 3a9cb5 78138f*/
-/*h
-	http://design-seeds.com/index.php/home/entry/plated-hues1
-*/
-body{
-	position: relative;
-	color: #453524;
-	font-family: "Roboto Slab", sans-serif;
-	margin: auto;
-	width:100%;
-	height:100%;
-	background: #fafafa;
-	overflow:hidden;
+/*Grid Implementation*/
+
+.contentContainer { 
+	position: relative; 
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.col1, .col2, .col3, .col4,
+.col5, .col6, .col7, .col8,
+.col9, .col10, .col11, .col12 {
+	float: left;
+}
+
+.col1 	{ width: 100%; 		}
+.col2 	{ width: 50%; 		}
+.col3 	{ width: 33.3333%; 	}
+.col4 	{ width: 25%; 		}
+.col5 	{ width: 20%; 		}
+.col6 	{ width: 16.6666%; 	}
+.col7 	{ width: 14.2857%; 	}
+.col8 	{ width: 12.5%; 	}
+.col9 	{ width: 11.1111%; 	}
+.col10 	{ width: 10%; 		}
+.col11 	{ width: 9.0909%; 	}
+.col12 	{ width: 8.3333%; 	}
+
+
+/*Main Styling*/
+body {
+	font-family: "Roboto Slab", sans-serif;
+	overflow:hidden;
+
+	/*Disable highlighting with this*/
+	//width:100%;
+	//height:100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
 	font-family: "Roboto Slab", sans-serif;
 	font-weight: bold;
+}
+
+a {
+	font-family: "Roboto Slab", sans-serif;
+	text-decoration: none;
+	color: #6d6d6d;
 }
 
 header {
@@ -95,6 +120,7 @@ header {
 		font-size: 25px;
 		font-size: bold;
 		margin-left: 20px;
+		cursor:pointer;
 	}
 
 		header .logo b:first-child {
@@ -121,6 +147,7 @@ header {
 		margin: 36px 0 0 15px;
 		padding-right: 15px;
 		border-right: 1px solid #FFF;
+		cursor:pointer;
 	}
 
 		.navContainer li:last-child {
@@ -148,14 +175,17 @@ header {
 	}
 	#page2 { 
 		background-image:url('images/bg2.jpg');
+		//background: rgba(255,255,255,1); 
 		left:100%;
 	}
 	#page3 { 
 		background-image:url('images/bg3.jpg');
+		//background: rgba(255,255,255,1);  
 		left:200%;
 	}
 	#page4 { 
 		background-image:url('images/bg4.jpg');
+		//background: rgba(255,255,255,1);  
 		left:300%;
 	}
 	#page5 { 
@@ -175,6 +205,53 @@ header {
 		left:700%;
 	}
 
+
+/*PAGE 1 - HOME*/
+#page1 .picture {
+	margin-top: 100px;
+	text-align:center;
+}
+	
+	#page1 .picture img {
+		width:180px;
+		height:180px;
+		border: 5px solid #4d4d4d;
+		border-radius: 20px;
+	}
+
+#page1 .name {
+	font-size: 80px;
+	line-height: 90px;
+	margin-top:10px;
+	text-align:center;
+	font-weight: bold;
+	color:#3d3d3d;
+}
+
+#page1 .subtitle {
+	font-size:21px;
+	color:#3d3d3d;
+	text-align: center;
+}
+
+#page1 .description {
+	text-align: center;
+}
+
+#page1 .description p {
+	width: 400px;
+	margin: 0 auto;
+	margin-top:70px;
+	text-align:left;
+	font-size: 16px;
+	line-height:20px;
+}
+
+	#page1 .description a {
+		width: 100%;
+		font-size: 20px;
+	}
+
 footer {
 	position: fixed;
 	left: 0;
@@ -183,3 +260,38 @@ footer {
 	height: 70px;
 	background:rgba(93,93,93,0.8);
 }
+
+@media(max-width: 800px) {
+	header {
+		height: 80px;
+	} 
+
+	footer {
+		height: 50px;
+	}
+
+	header .logo {
+		line-height: 80px;
+		font-size: 20px;
+		margin-left: 15px;
+	}
+
+		header .logo b:first-child {
+			margin-right:-3px;
+		}
+
+		header .logo b{
+			line-height: 80px;
+			font-size: 25px;
+		}
+
+	.navContainer li {
+		font-size: 13px;
+		line-height: 25px;
+		list-style: none;
+		margin: 28px 0 0 15px;
+		padding-right: 10px;
+	}
+
+}
+
