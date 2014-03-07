@@ -129,6 +129,15 @@ header {
 		cursor:pointer;
 	}
 
+		header .logo:hover a,
+		header .logo:hover a b {
+			color: #72d0b9;
+		}
+
+		header .logo a {
+			color: #FFFFFF;
+		}
+
 		header .logo b:first-child {
 			margin-right:-3px;
 		}
@@ -152,9 +161,16 @@ header {
 		list-style: none;
 		margin: 36px 0 0 15px;
 		padding-right: 15px;
-		border-right: 1px solid #FFF;
 		cursor:pointer;
 	}
+
+		.navContainer li:hover a{
+			color: #72d0b9;
+ 		}
+
+		.navContainer li a {
+			color:#FFFFFF;
+		}
 
 		.navContainer li:last-child {
 			border-right: none;
@@ -164,6 +180,7 @@ header {
 .content {
 	width:100%;
 	height:100%;
+	overflow-x:hidden;
 }
 
 	.page {
@@ -252,6 +269,7 @@ header {
 	text-align:left;
 	font-size: 16px;
 	line-height:20px;
+	margin-bottom:10px;
 }
 
 	#page1 .description a {
@@ -268,7 +286,24 @@ footer {
 	height: 70px;
 	background:rgba(93,93,93,0.8);
 }
+	
+	.footerContainer {
+		max-width: 1024px;
+		margin: 0 auto;
+		line-height: 70px;
+		text-align:center;
+	}
 
+		.footerContainer .icon a {
+			font-size: 30px;
+			color: #FFF;
+		}
+
+			.footerContainer .icon a:hover {
+				color:#72d0b9;
+			}
+
+/*RWD*/
 @media(max-width: 600px) {
 	header {
 		height: 80px;
@@ -277,6 +312,10 @@ footer {
 	footer {
 		height: 50px;
 	}
+
+		.footerContainer {
+			line-height: 50px;
+		}
 
 	header .logo {
 		line-height: 80px;
