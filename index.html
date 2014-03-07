@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="eventoApp">
 	<head>
-		<title>Evento</title>
+		<title>Waisze Lam</title>
 
 		<!-- Load things -->
 
@@ -25,10 +25,51 @@
 	<body ng-controller = "MyController">
 		
 		<div class="main-wrapper">
-				Hi there!
+								
+			<header>
+				<div class="logo" onclick="scrollToPage('0')"><b>W</b>AISZE <b>L</b>AM</div>
+
+				<ul class="navContainer">
+					<li class="navItem" id="navItem2" onclick="scrollToPage('100')">About Me</li>
+					<li class="navItem" id="navItem3" onclick="scrollToPage('200')">Skill Set</li>
+					<li class="navItem" id="navItem4" onclick="scrollToPage('300')">Contact</li>
+				</ul>
+				<div class="clearFloat"></div>
+			</header>
+
+			<div class="content">
+				<ul>
+					<li class="page home" id="page1" style="left:0%"></li>
+					<li class="page" id="page2" style="left:100%"></li>
+					<li class="page" id="page3" style="left:200%"></li>
+					<li class="page" id="page4" style="left:300%"></li>
+					<div class="clearFloat"></div>
+				</ul>
+			</div>
+
+			<footer>
+
+			</footer>
 			
 			<div class="clearFloat"></div>
 		</div>
-
 	</body>
+
+	<script>	
+		var curPos = 0;											//current position global variable
+
+		function scrollToPage(position) {
+			var pos = parseInt(position);						//(int)position of page
+			var rePos = curPos - pos;							//rePositioning required for each page
+			var docId="page";					
+			for(var i=1;i<5;i++) {
+				var curID = docId + i.toString();				//set currentID
+				var elem = document.getElementById(curID);
+				var newPos = parseInt(elem.style.left) + rePos;	//set newPosition of page
+				elem.style.left = newPos.toString() + "%";
+				curPos = pos;									//set global variable for next call
+			}
+		}
+
+	</script>
 </html>
