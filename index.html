@@ -19,7 +19,7 @@
 
 	<body>
 		<div class="main-wrapper">			
-			<header>
+			<header class="header">
 				<div class="headerContainer">
 					<div class="logo"><a href="#page1"><b>W</b>AISZE <b>L</b>AM<a></div>
 
@@ -27,8 +27,18 @@
 						<li class="navItem" id="navItem2"><a href="#page2">About Me</a></li>
 						<li class="navItem" id="navItem3"><a href="#page3">Skill Set</a></li>
 						<li class="navItem" id="navItem4"><a href="#page4">Contact</a></li>
+						<li id="mobileDropdownIcon" onclick="toggleMenu('mobileDropdown');"><i class="fa fa-bars"></i></li>
 					</ul>
+
 					<div class="clearFloat"></div>
+				</div>
+				<div id="mobileDropdown" style="height: 0px;">
+					<ul>
+						<li><a href="#page2">About Me</a></li>
+						<li><a href="#page3">Skill Set</a></li>
+						<li><a href="#page4">Contact</a></li>
+					</ul>
+
 				</div>
 			</header>
 
@@ -98,7 +108,7 @@
 
 	<script>
 		$(function() {
-		    $('.headerContainer a').bind('click',function(event){
+		    $('.header a').bind('click',function(event){
 		        var $anchor = $(this);
 		        $('html, body').stop().animate({
 		            scrollLeft: $($anchor.attr('href')).offset().left
@@ -106,5 +116,12 @@
 		        event.preventDefault();
 		    });
 		});
+		function toggleMenu(src) {
+			var ele = document.getElementById(src);
+			if (ele.style.height == "0px")
+				ele.style.height = "108px";
+			else
+				ele.style.height = "0px";
+		}
 	</script>
 </html>

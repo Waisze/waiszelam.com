@@ -164,7 +164,8 @@ header {
 		cursor:pointer;
 	}
 
-		.navContainer li:hover a{
+		.navContainer li:hover a,
+		#mobileDropdownIcon:hover a{
 			color: #72d0b9;
  		}
 
@@ -172,9 +173,37 @@ header {
 			color:#FFFFFF;
 		}
 
-		.navContainer li:last-child {
-			border-right: none;
+		#mobileDropdownIcon {
+			display: none;
+			font-size: 25px;
 		}
+
+	#mobileDropdown {
+		display: none;
+		height: 0;
+		transition: 0.5s;
+		overflow:hidden;
+	}
+
+		#mobileDropdown ul {
+			float:right;
+			width:50%;
+		}
+
+			#mobileDropdown li{
+				text-align: right;
+				background:rgba(93,93,93,0.8);
+				padding: 10px 15px 10px 10px;
+				cursor: pointer;
+			}
+
+				#mobileDropdown li a{
+					color:#FFF;
+				}
+
+				#mobileDropdown li:hover a{
+					color:#72d0b9;
+				}
 
 
 .content {
@@ -305,17 +334,10 @@ footer {
 
 /*RWD*/
 @media(max-width: 600px) {
+
 	header {
 		height: 80px;
 	} 
-
-	footer {
-		height: 50px;
-	}
-
-		.footerContainer {
-			line-height: 50px;
-		}
 
 	header .logo {
 		line-height: 80px;
@@ -338,6 +360,16 @@ footer {
 		list-style: none;
 		margin: 28px 0 0 15px;
 		padding-right: 10px;
+		display: none;
+	}
+
+	#mobileDropdownIcon {
+		 display: block;
+	}
+
+	#mobileDropdown {
+		display: block;
+		height: 108px;
 	}
 
 	#page1 .picture {
@@ -355,5 +387,12 @@ footer {
 		margin-bottom:30px;
 	}
 
+	footer {
+		height: 50px;
+	}
+
+		.footerContainer {
+			line-height: 50px;
+		}
 }
 
