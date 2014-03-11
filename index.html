@@ -14,6 +14,7 @@
 		<!--jQuery-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+		<!--Control layout on mobile-->
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 	</head>
 
@@ -21,12 +22,12 @@
 		<div class="main-wrapper">			
 			<header class="header">
 				<div class="headerContainer">
-					<div class="logo"><a href="#page1"><b>W</b>AISZE <b>L</b>AM<a></div>
+					<div class="logo" id="logo"><a  id="navItem1" href="#page1"><b>W</b>AISZE <b>L</b>AM<a></div>
 
 					<ul class="navContainer">
-						<li class="navItem" id="navItem2"><a href="#page2">About Me</a></li>
-						<li class="navItem" id="navItem3"><a href="#page3">Skill Set</a></li>
-						<li class="navItem" id="navItem4"><a href="#page4">Contact</a></li>
+						<li class="navItem"><a id="navItem2" href="#page2">About Me</a></li>
+						<li class="navItem"><a id="navItem3" href="#page3">Skill Set</a></li>
+						<li class="navItem"><a id="navItem4" href="#page4">Contact</a></li>
 						<li id="mobileDropdownIcon" onclick="toggleMenu('mobileDropdown');"><i class="fa fa-bars"></i></li>
 					</ul>
 
@@ -34,9 +35,9 @@
 				</div>
 				<div id="mobileDropdown" style="height: 0px;">
 					<ul>
-						<li><a href="#page2">About Me</a></li>
-						<li><a href="#page3">Skill Set</a></li>
-						<li><a href="#page4">Contact</a></li>
+						<li><a href="#page2" id="navMobileItem2" onclick="toggleMenu('mobileDropdown');">About Me</a></li>
+						<li><a href="#page3" id="navMobileItem3" onclick="toggleMenu('mobileDropdown');">Skill Set</a></li>
+						<li><a href="#page4" id="navMobileItem4" onclick="toggleMenu('mobileDropdown');">Contact</a></li>
 					</ul>
 
 				</div>
@@ -60,7 +61,7 @@
 
 							<div class="col1 description">
 								<p>Welcome! This site is currently under development. In the meantime, feel free to grab a copy of my resume!</p>
-								<a href="waisze.pdf">RESUME</a>
+								<a href="waisze.pdf">VIEW RESUME</a>
 							</div>
 						</div>
 					</li>
@@ -107,6 +108,8 @@
 	</body>
 
 	<script>
+
+		//Smooth Scrolling
 		$(function() {
 		    $('.header a').bind('click',function(event){
 		        var $anchor = $(this);
@@ -116,6 +119,35 @@
 		        event.preventDefault();
 		    });
 		});
+
+		//Check scroll position and set active class to nav
+		$(document).scroll(function(){
+		    if($(this).scrollLeft() <= $(window).width()*0.2){
+		    	active("#navItem1, #navMobileItem1"); 
+		    }
+		    else if($(this).scrollLeft() <= $(window).width()*1.2){
+		    	active("#navItem2", "#navMobileItem2"); 
+		    }
+		    else if($(this).scrollLeft() <= $(window).width()*2.2){
+		    	active("#navItem3", "#navMobileItem3"); 
+		    }
+		    else if($(this).scrollLeft() <= $(window).width()*3.2){
+		    	active("#navItem4", "#navMobileItem4"); 
+		    }
+		});
+
+		//Set active class
+		function active(src, src2){
+		  	if (!$(src).hasClass("active")) {
+			    $(".headerContainer a").removeClass("active");
+			    $("#mobileDropdown a").removeClass("active");
+
+			    $(src).addClass("active");
+			    $(src2).addClass("active");
+			}
+		};
+
+		//Toggle mobile menu
 		function toggleMenu(src) {
 			var ele = document.getElementById(src);
 			if (ele.style.height == "0px")
@@ -123,5 +155,6 @@
 			else
 				ele.style.height = "0px";
 		}
+
 	</script>
 </html>

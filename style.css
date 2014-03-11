@@ -173,6 +173,10 @@ header {
 			color:#FFFFFF;
 		}
 
+			.navContainer li a.active {
+				color:#72d0b9;
+			}
+
 		#mobileDropdownIcon {
 			display: none;
 			font-size: 25px;
@@ -199,6 +203,10 @@ header {
 
 				#mobileDropdown li a{
 					color:#FFF;
+				}
+
+				#mobileDropdown li a.active {
+					color:#72d0b9;
 				}
 
 				#mobileDropdown li:hover a{
@@ -336,11 +344,11 @@ footer {
 @media(max-width: 600px) {
 
 	header {
-		height: 80px;
+		height: 50px;
 	} 
 
 	header .logo {
-		line-height: 80px;
+		line-height: 50px;
 		font-size: 20px;
 		margin-left: 15px;
 	}
@@ -350,7 +358,7 @@ footer {
 		}
 
 		header .logo b{
-			line-height: 80px;
+			line-height: 50px;
 			font-size: 25px;
 		}
 
@@ -358,7 +366,7 @@ footer {
 		font-size: 13px;
 		line-height: 25px;
 		list-style: none;
-		margin: 28px 0 0 15px;
+		margin: 13px 0 0 15px;
 		padding-right: 10px;
 		display: none;
 	}
