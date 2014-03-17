@@ -26,18 +26,18 @@
 
 					<ul class="navContainer">
 						<li class="navItem"><a id="navItem2" href="#page2">About Me</a></li>
-						<li class="navItem"><a id="navItem3" href="#page3">Skill Set</a></li>
+						<li class="navItem"><a id="navItem3" href="#page3">Portfolio</a></li>
 						<li class="navItem"><a id="navItem4" href="#page4">Contact</a></li>
-						<li id="mobileDropdownIcon" onclick="toggleMenu('mobileDropdown');"><i class="fa fa-bars"></i></li>
+						<li id="mobileDropdownIcon" onclick="toggle('#mobileDropdown');"><i class="fa fa-bars"></i></li>
 					</ul>
 
 					<div class="clearFloat"></div>
 				</div>
-				<div id="mobileDropdown" style="height: 0px;">
+				<div id="mobileDropdown">
 					<ul>
-						<li><a href="#page2" id="navMobileItem2" onclick="toggleMenu('mobileDropdown');">About Me</a></li>
-						<li><a href="#page3" id="navMobileItem3" onclick="toggleMenu('mobileDropdown');">Skill Set</a></li>
-						<li><a href="#page4" id="navMobileItem4" onclick="toggleMenu('mobileDropdown');">Contact</a></li>
+						<li><a href="#page2" id="navMobileItem2" onclick="toggle('#mobileDropdown');">About Me</a></li>
+						<li><a href="#page3" id="navMobileItem3" onclick="toggle('#mobileDropdown');">Portfolio</a></li>
+						<li><a href="#page4" id="navMobileItem4" onclick="toggle('#mobileDropdown');">Contact</a></li>
 					</ul>
 
 				</div>
@@ -47,19 +47,19 @@
 				<ul>
 					<li class="page home" id="page1">
 						<div class="contentContainer">
-							<div class="col1 picture">
+							<div class="col12 picture">
 								<img src="images/me.jpg"></img>
 							</div>
 
-							<div class="col1 name">
+							<div class="col12 name">
 								Waisze Lam
 							</div>
 
-							<div class="col1 subtitle">
+							<div class="col12 subtitle">
 								Web Developer. Software Engineer. Designer.
 							</div>
 
-							<div class="col1 description">
+							<div class="col12 description">
 								<p>Welcome! This site is currently under development. In the meantime, feel free to grab a copy of my resume!</p>
 								<a href="waisze.pdf">VIEW RESUME</a>
 							</div>
@@ -69,7 +69,93 @@
 						<div class="contentContainer"></div>
 					</li>
 					<li class="page" id="page3">
-						<div class="contentContainer"></div>
+						<div class="contentContainer">
+							<div class="row" id="contentRow">
+								<div class="col12">
+									<div class="content-box">
+
+										<div class="timeline"></div>
+
+										<div class"row">
+											<div class="col6 mobilecol12 right">
+												<div class="bubble right" id="bubbleWaisze" onclick="toggle('#bubbleWaisze');">
+													<div class="needle">
+														2014
+														<div class="pointer"></div>
+													</div>
+													<div class="thumbnail">
+														<img src="images/me.jpg"></img>
+													</div>
+													<div class="bubbleContent">
+														<div class="header">WaiszeLam.com</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="clearFloat"></div>
+
+										<div class"row">
+											<div class="col6 mobilecol12">
+												<div class="bubble left" id="bubbleEvento" onclick="toggle('#bubbleEvento');">
+													<div class="needle">
+														2013-2014
+														<div class="pointer"></div>
+													</div>
+													<div class="thumbnail">
+														<img src="images/evento.png"></img>
+													</div>
+													<div class="bubbleContent">
+														<div class="header">Evento</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="clearFloat"></div>
+
+										<div class"row">
+											<div class="col6 mobilecol12">
+												<div class="bubble left" id="bubbleIBM" onclick="toggle('#bubbleIBM');">
+													<div class="needle">
+														2012-2014
+														<div class="pointer"></div>
+													</div>
+													<div class="thumbnail">
+														<img src="images/IBM.jpg"></img>
+													</div>
+													<div class="bubbleContent">
+														<div class="header">IBM</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="clearFloat"></div>
+
+										<div class"row">
+											<div class="col6 mobilecol12 right">
+												<div class="bubble right" id="bubbleOEC" onclick="toggle('#bubbleOEC');">
+													<div class="needle">
+														2011-2012
+														<div class="pointer"></div>
+													</div>
+													<div class="thumbnail">
+														<img src="images/OEC2012.png"></img>
+													</div>
+													<div class="bubbleContent">
+														<div class="header">Ontario <br>Engineering <br> Competitions</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="clearFloat"></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
 					</li>
 					<li class="page" id="page4">
 						<div class="contentContainer"></div>
@@ -80,25 +166,27 @@
 
 			<footer>
 				<div class="footerContainer">
-					<div class="col4 icon">
-						<a href="mailto:lam.waisze@gmail.com">
-							<i class="fa fa-envelope"></i>
-						</a>
-					</div>
-					<div class="col4 icon">
-						<a href="waisze.pdf">
-							<i class="fa fa-suitcase"></i>
-						</a>
-					</div>
-					<div class="col4 icon">
-						<a href="http://linkedin.waiszelam.com">
-							<i class="fa fa-linkedin"></i>
-						</a>
-					</div>
-					<div class="col4 icon">
-						<a href="https://github.com/Waisze">
-							<i class="fa fa-github"></i>
-						</a>
+					<div class="row">
+						<div class="col3 icon">
+							<a href="mailto:lam.waisze@gmail.com">
+								<i class="fa fa-envelope"></i>
+							</a>
+						</div>
+						<div class="col3 icon">
+							<a href="waisze.pdf">
+								<i class="fa fa-suitcase"></i>
+							</a>
+						</div>
+						<div class="col3 icon">
+							<a href="http://linkedin.waiszelam.com">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</div>
+						<div class="col3 icon">
+							<a href="https://github.com/Waisze">
+								<i class="fa fa-github"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</footer>
@@ -147,14 +235,18 @@
 			}
 		};
 
-		//Toggle mobile menu
-		function toggleMenu(src) {
-			var ele = document.getElementById(src);
-			if (ele.style.height == "0px")
-				ele.style.height = "108px";
-			else
-				ele.style.height = "0px";
-		}
+		function toggle(src){
+		  	if (!$(src).hasClass("toggle")) {
+			    $(src).addClass("toggle");
+
+			    //reset bubble
+			    $("#page4 .bubble").removeClass("toggle");
+			    $(src).addClass("toggle");
+			}
+			else {
+			    $(src).removeClass("toggle");
+			}
+		};
 
 	</script>
 </html>

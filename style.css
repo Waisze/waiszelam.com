@@ -63,24 +63,38 @@ html {
 	padding-top: 100px;
 }
 
-.col1, .col2, .col3, .col4,
-.col5, .col6, .col7, .col8,
-.col9, .col10, .col11, .col12 {
-	float: left;
+.left {
+	float:left;
 }
 
-.col1 	{ width: 100%; 		}
-.col2 	{ width: 50%; 		}
-.col3 	{ width: 33.3333%; 	}
-.col4 	{ width: 25%; 		}
-.col5 	{ width: 20%; 		}
-.col6 	{ width: 16.6666%; 	}
-.col7 	{ width: 14.2857%; 	}
-.col8 	{ width: 12.5%; 	}
-.col9 	{ width: 11.1111%; 	}
-.col10 	{ width: 10%; 		}
-.col11 	{ width: 9.0909%; 	}
-.col12 	{ width: 8.3333%; 	}
+.right {
+	float:right;
+}
+
+.row {
+	clear: both;
+}
+
+.row > * {
+	float:left;
+}
+
+.col12 	{ width: 100%; 		}
+.col11	{ width: 91.6666%; 	}
+.col10 	{ width: 83.3333%; 	}
+.col9 	{ width: 75%;	 	}
+.col8 	{ width: 66.6666%; 	}
+.col7 	{ width: 58.3333%; 	}
+.col6 	{ width: 50%;	 	}
+.col5 	{ width: 41.6666%; 	}
+.col4 	{ width: 33.3333%; 	}
+.col3 	{ width: 25%; 		}
+.col2 	{ width: 16.6666%; 	}
+.col1 	{ width: 8.3333%; 	}
+
+.content-box {
+	margin-left: 10px;
+}
 
 
 /*Main Styling*/
@@ -239,12 +253,12 @@ header {
 		left:100%;
 	}
 	#page3 { 
-		background-image:url('images/bg3.jpg');
+		background-image:url('images/bg.jpg');
 		//background: rgba(255,255,255,1);  
 		left:200%;
 	}
 	#page4 { 
-		background-image:url('images/bg4.jpg');
+		background-image:url('images/bg3.jpg');
 		//background: rgba(255,255,255,1);  
 		left:300%;
 	}
@@ -315,6 +329,146 @@ header {
 		font-weight: bold;
 	}
 
+/*PAGE 3*/
+#page3 #contentRow {
+	margin: 50px 10px 0 0;
+}
+
+#page3 .timeline {
+	position:absolute;
+	width:50%;
+	height: 700px;
+	border-right: 1px solid #000;
+}
+
+#page3 .bubble {
+	position:relative;
+	width:100px;
+	height:100px;
+	border-radius: 50px;
+	background: rgba(240,240,240,0.8);
+	//background:rgba(93,93,93,0.7);
+	transition: 0.2s;
+	margin-top: 20px;
+}
+
+	#page3 .bubble.toggle {
+		//width:70%;
+		width: 250px;
+		height: 280px;
+		border-radius: 10px;
+	}
+
+	#page3 .needle {
+		position: absolute;
+		top: 30px;
+		width: 115px;
+		height: 20px;
+		border-bottom: 1px solid #000;
+		box-shadow: 0px 3px 3px -3px #888888;
+	}
+
+		#page3 .needle .pointer {
+			margin-top: 9px;
+			width:16px;
+			height:16px;
+			border-radius: 10px;
+			background:#000;
+			border: 4px solid #FFF;
+
+		box-shadow: 2px 2px 2px #888888;
+		}
+
+	#page3 .thumbnail {
+		width:98px;
+		height:98px;
+		border: 1px solid #FFF;
+		border-radius:49px;
+		overflow: hidden;
+		box-shadow: 3px 3px 3px #888888;
+	}
+
+		#page3 .thumbnail img {
+			width:100%;
+		}
+
+	#page3 .bubbleContent {
+		display:none;
+		margin: 10px 20px 10px 20px;
+	}
+
+	#page3 .bubble.toggle .bubbleContent {
+		display:block;
+	}
+
+	#page3 .bubbleContent .header {
+		font-size: 15px;
+		font-weight: bold;
+		line-height: 18px;
+		margin-top:30px;
+	}
+
+	/*Left Bubble*/
+	#page3 .bubble.left {
+		margin-right: 93px;
+	}
+
+	#page3 .bubble.left,
+	#page3 .bubble.left .thumbnail,
+	#page3 .bubble.left .needle .pointer {
+		float:right;
+	}
+
+	#page3 .bubble.left.toggle {
+		border-top-right-radius: 50px;
+	}
+
+	#page3 .bubble.left .needle {
+		right: -115px;
+		text-align:right;
+	}
+
+	#page3 .bubble.left .bubbleContent .header {
+		margin-right: 10px;
+		float:right;
+	}
+
+	/*Right Bubble*/
+	#page3 .bubble.right {
+		margin-left: 114px;
+	}
+
+	#page3 .bubble.right,
+	#page3 .bubble.right .thumbnail,
+	#page3 .bubble.right .needle .pointer {
+		float:left;
+	}
+
+	#page3 .bubble.right.toggle {
+		border-top-left-radius: 50px;
+	}
+
+	#page3 .bubble.right .needle {
+		left: -115px;
+		text-align:left;
+	}
+
+	#page3 .bubble.right .bubbleContent .header {
+		margin-left: 10px;
+		float:left;
+	}
+
+	/*Bubble specific CSS*/
+	#bubbleIBM .thumbnail { background: #FFF; }
+	#bubbleIBM img{ margin-top: 28px; }
+
+	#bubbleOEC .thumbnail { background: #FFF; }
+	#bubbleOEC img{ margin-top: 7px; }
+	#bubbleOEC .bubbleContent .header {
+		margin-top: 14px;
+	}
+
+
 footer {
 	position: fixed;
 	left: 0;
@@ -341,6 +495,68 @@ footer {
 			}
 
 /*RWD*/
+@media(max-width:750px) {
+	.col6.mobilecol12 {
+		width:100%;
+		float:left;
+	}
+
+	#page3 #contentRow {
+		margin: 0px 10px 0 0;
+	}
+
+	#page3 .timeline {
+		margin-left: 11px;
+		border-right: 0;
+		border-left: 1px solid #000;
+	}
+
+	#page3 .bubble {
+		width:80px;
+		height:80px;
+		border-radius: 40px;
+	}
+
+	#page3 .thumbnail {
+		width:78px;
+		height:78px;
+		border-radius:39px;
+	}
+
+	/*Left Bubble*/
+	#page3 .bubble.left,
+	#page3 .bubble.right {
+		margin-left: 115px;
+	}
+
+	#page3 .bubble.left,
+	#page3 .bubble.left .thumbnail,
+	#page3 .bubble.left .needle .pointer,	
+	#page3 .bubble.right,
+	#page3 .bubble.right .thumbnail,
+	#page3 .bubble.right .needle .pointer {
+		float:left;
+	}
+
+	#page3 .bubble.left.toggle,
+	#page3 .bubble.right.toggle {
+		height:400px;
+		border-top-left-radius: 50px;
+		border-top-right-radius: 10px;
+	}
+
+	#page3 .bubble.left .needle,
+	#page3 .bubble.right .needle {
+		top:20px;
+		left: -115px;
+		text-align:left;
+	}
+
+	#bubbleIBM img {
+		margin-top: 24px;
+	}
+}
+
 @media(max-width: 600px) {
 
 	header {
@@ -377,7 +593,11 @@ footer {
 
 	#mobileDropdown {
 		display: block;
-		height: 108px;
+		height: 0px;
+	}
+
+	#mobileDropdown.toggle {
+		height:108px;
 	}
 
 	#page1 .picture {
@@ -402,5 +622,22 @@ footer {
 		.footerContainer {
 			line-height: 50px;
 		}
+}
+
+@media(max-width: 400px) {
+	#page3 .bubble.left, 
+	#page3 .bubble.right {
+		margin-left: 84px;
+	}
+
+	#page3 .needle {
+		width:85px;
+	}
+
+	#page3 .bubble.left .needle, 
+	#page3 .bubble.right .needle {
+		left: -85px;
+		font-size: 12px;
+	}
 }
 
