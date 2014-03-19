@@ -331,7 +331,7 @@ header {
 
 /*PAGE 3*/
 #page3 #contentRow {
-	margin: 50px 10px 0 0;
+	margin: 50px 10px 100px 0;
 }
 
 #page3 .timeline {
@@ -355,7 +355,7 @@ header {
 	#page3 .bubble.toggle {
 		//width:70%;
 		width: 250px;
-		height: 280px;
+		height: 270px;
 		border-radius: 10px;
 	}
 
@@ -375,8 +375,7 @@ header {
 			border-radius: 10px;
 			background:#000;
 			border: 4px solid #FFF;
-
-		box-shadow: 2px 2px 2px #888888;
+			box-shadow: 2px 2px 2px #888888;
 		}
 
 	#page3 .thumbnail {
@@ -393,19 +392,46 @@ header {
 		}
 
 	#page3 .bubbleContent {
-		display:none;
+		position:absolute;
+		width:0;
+		overflow: hidden;
 		margin: 10px 20px 10px 20px;
+		transition: 0.0s;
+		transition-delay:0.0s;
+		
 	}
 
 	#page3 .bubble.toggle .bubbleContent {
+		width: 210px;
+		height: 140px;
 		display:block;
+		transition: 0.2s;
+		transition-delay:0.2s;
 	}
 
-	#page3 .bubbleContent .header {
+	#page3 .header {
+		position:absolute;
+		width:0;
+		overflow: hidden;
 		font-size: 15px;
 		font-weight: bold;
 		line-height: 18px;
-		margin-top:30px;
+		margin-top:41px;
+		transition: 0.0s;
+		transition-delay:0.0s;
+	}
+
+	#page3 .bubble.toggle .header {
+		width:120px;
+		transition: 0.2s;
+		transition-delay:0.2s;
+	}
+
+	#page3 .bubbleContent .description {
+		margin-top:10px;
+		margin-bottom:20px;
+		font-size: 15px;
+		line-height: 18px;
 	}
 
 	/*Left Bubble*/
@@ -428,9 +454,10 @@ header {
 		text-align:right;
 	}
 
-	#page3 .bubble.left .bubbleContent .header {
+	#page3 .bubble.left .header {
 		margin-right: 10px;
-		float:right;
+		right:105px;
+		text-align:right;
 	}
 
 	/*Right Bubble*/
@@ -453,9 +480,9 @@ header {
 		text-align:left;
 	}
 
-	#page3 .bubble.right .bubbleContent .header {
+	#page3 .bubble.right .header {
 		margin-left: 10px;
-		float:left;
+		right:20px;
 	}
 
 	/*Bubble specific CSS*/
@@ -464,8 +491,8 @@ header {
 
 	#bubbleOEC .thumbnail { background: #FFF; }
 	#bubbleOEC img{ margin-top: 7px; }
-	#bubbleOEC .bubbleContent .header {
-		margin-top: 14px;
+	#bubbleOEC .header {
+		margin-top: 21px;
 	}
 
 
@@ -502,7 +529,7 @@ footer {
 	}
 
 	#page3 #contentRow {
-		margin: 0px 10px 0 0;
+		margin: 0px 10px 50px; 0;
 	}
 
 	#page3 .timeline {
@@ -540,7 +567,6 @@ footer {
 
 	#page3 .bubble.left.toggle,
 	#page3 .bubble.right.toggle {
-		height:400px;
 		border-top-left-radius: 50px;
 		border-top-right-radius: 10px;
 	}
@@ -552,8 +578,24 @@ footer {
 		text-align:left;
 	}
 
+	#page3 .bubble.left .header,
+	#page3 .bubble.right .header,
+	#page3 .bubbleContent .header {
+		margin-left: 10px;
+		float:left;
+		margin-top: 31px;
+		text-align:left;
+		right: auto;
+		left: 78px;
+	}
+
+
 	#bubbleIBM img {
 		margin-top: 24px;
+	}
+
+	#page3 #bubbleOEC .header {
+		margin-top: 14px;
 	}
 }
 
@@ -625,6 +667,26 @@ footer {
 }
 
 @media(max-width: 400px) {
+	#page3 .bubble.toggle {
+		width:200px;
+	}
+
+	#page3 .bubble.toggle .bubbleContent {
+		width:180px;
+	}
+
+	#page3 .bubbleContent {
+		margin:10px;
+	}
+
+	#page3 .header {
+		font-size: 13px;
+	}
+
+	#page3 .bubble.toggle .header {
+		width:102px;
+	}
+
 	#page3 .bubble.left, 
 	#page3 .bubble.right {
 		margin-left: 84px;
@@ -639,5 +701,6 @@ footer {
 		left: -85px;
 		font-size: 12px;
 	}
+
 }
 
