@@ -56,7 +56,7 @@
 							</div>
 
 							<div class="col12 subtitle">
-								Web Developer. Software Engineer. Designer.
+								| w&#299; z&#275; | : Web Developer. Software Engineer. Designer.
 							</div>
 
 							<div class="col12 description">
@@ -76,7 +76,7 @@
 
 										<div class="timeline"></div>
 
-												<div class="bubble toggle3" id="bubbleWaisze" onclick="toggle('#bubbleWaisze');">
+												<div class="bubble toggle" id="bubbleWaisze" onclick="toggle('#bubbleWaisze');">
 													<div class="needle">
 														<!--2014-->
 														<div class="pointer"></div>
@@ -105,7 +105,7 @@
 													<div class="clearFloat"></div>
 													<div class="bubbleContent">
 														<div class="description">
-														Worked on full-stack development of the web application Evento. This Toronto-based events aggregate serves users suitable activities through machine learning.</div>
+														Worked on full-stack development of the web application Evento. This Toronto-based events aggregate suggests events to users using machine learning.</div>
 														<div class="clearFloat"></div>
 													</div>
 												</div>
@@ -236,11 +236,20 @@
 			    //reset bubble
 			    $("#page3 .bubble").removeClass("toggle");
 			    $(src).addClass("toggle");
+
+			    //reset bottom bubbles
+			    $("#page3 .bubble.botTag").removeClass("botTag").addClass("bottom");
+			    if($(src).hasClass("bottom")) {
+			    	$(src).addClass("botTag").removeClass("bottom");
+			    }
+
 			}
 			else {
 			    $(src).removeClass("toggle");
+			    $("#page3 .bubble.botTag").removeClass("botTag").addClass("bottom");
 			}
 		};
 
 	</script>
+	
 </html>
