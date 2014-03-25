@@ -31,6 +31,9 @@ body {
 ol, ul {
 	list-style: none;
 }
+b {
+	font-weight: bold;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -95,6 +98,7 @@ html {
 
 .content-box {
 	margin-left: 10px;
+	margin-bottom:50px;
 }
 
 
@@ -147,6 +151,7 @@ header {
 		header .logo:hover a,
 		header .logo:hover a b {
 			color: #72d0b9;
+			font-weight: normal;
 		}
 
 		header .logo a {
@@ -161,6 +166,7 @@ header {
 			color: #FFFFFF;
 			line-height: 100px;
 			font-size: 30px;
+			font-weight: normal;
 		}
 
 	.navContainer {
@@ -202,11 +208,12 @@ header {
 		height: 0;
 		transition: 0.5s;
 		overflow:hidden;
+		float:right;
 	}
 
 		#mobileDropdown ul {
 			float:right;
-			width:50%;
+			width:180px;
 		}
 
 			#mobileDropdown li{
@@ -318,7 +325,6 @@ header {
 	
 	#page1 .picture img {
 		width:180px;
-		height:180px;
 		//border: 5px solid #4d4d4d;
 		border-radius: 20px;
 	}
@@ -334,8 +340,11 @@ header {
 
 #page1 .subtitle {
 	font-size:21px;
+	line-height:30px;
 	color:#3d3d3d;
-	text-align: center;
+	text-align: left;
+	width:222px;
+	margin:0 auto;
 }
 
 #page1 .description {
@@ -367,8 +376,8 @@ header {
 #page3 .timeline {
 	position:absolute;
 	width:100%;
-	height:240px;
-	border-bottom: 1px solid #000;
+	height: 239px;
+	border-bottom: 3px solid #9f9f9f;
 	z-index:-2;
 }
 
@@ -393,11 +402,11 @@ header {
 
 	#page3 .needle {
 		position: absolute;
-		left: 49px;
+		left: 48px;
 		text-align:left;
 		top: 100px;
 		height: 115px;
-		border-right: 1px solid #000;
+		border-right: 3px solid #9f9f9f;
 		box-shadow: 3px 0px 3px -3px #888888;
 		z-index:-1;
 		transition:0.2s;
@@ -407,7 +416,7 @@ header {
 			float:left;
 			position: absolute;
 			bottom: -17px;
-			left: -12px;
+			left: -11px;
 			width: 16px;
 			height: 16px;
 			border-radius: 10px;
@@ -454,7 +463,7 @@ header {
 		position:absolute;
 		width:0;
 		margin-left: 10px;
-		right:20px;
+		left: 100px;
 		overflow: hidden;
 		font-size: 15px;
 		font-weight: bold;
@@ -493,8 +502,6 @@ header {
 		top: -10px;
 	}
 
-
-	
 	/*Bubble specific CSS*/
 	#bubbleIBM .thumbnail { background: #FFF; }
 	#bubbleIBM img{ margin-top: 28px; }
@@ -504,7 +511,6 @@ header {
 	#bubbleOEC .header {
 		margin-top: 21px;
 	}
-
 
 footer {
 	position: fixed;
@@ -532,7 +538,7 @@ footer {
 			}
 
 /*RWD*/
-@media(max-height:825px) {
+@media(max-height:825px),(max-width: 750px) {
 	header {
 		height: 50px;
 	} 
@@ -564,6 +570,10 @@ footer {
 		padding-top:50px;
 	}
 
+	#page1 .picture {
+		margin-top:50px;
+	}
+
 	footer {
 		height: 50px;
 	}
@@ -573,7 +583,22 @@ footer {
 		}
 }
 
-@media(max-width:750px) {
+@media(max-height:750px),(max-width: 750px) {
+	#page3 .bubble.botTag {
+		margin-top: 20px;
+	}
+
+	#page3 .bubble.botTag .needle {
+		top:80px;
+	}
+
+	#page3 .botTag .needle .pointer {
+		bottom: auto;
+		top: 70px;
+	}
+}
+
+@media(max-width:750px), (max-height:600px) {
 
 	#page3 #contentRow {
 		margin: 0px 10px 50px; 0;
@@ -583,10 +608,10 @@ footer {
 		height:180px;
 	}
 
-	#page3 .bubble {
+	#page3 .bubble,
+	#page3 .bubble.botTag {
 		width:80px;
 		height:80px;
-		border-radius: 40px;
 	}
 
 		#page3 .bubble.toggle {
@@ -600,7 +625,8 @@ footer {
 		border-radius:39px;
 	}
 
-	#page3 .needle {
+	#page3 .needle,
+	#page3 .bubble.botTag .needle {
 		height:75px;
 		left: 39px;
 		top: 80px;
@@ -618,20 +644,18 @@ footer {
 	#page3 .header {
 		margin-top: 35px;
 		font-size: 13px;
-		right: -10px;
+		left: 80px;
 	}
 
 	#page3 .bubbleContent .description {
 		font-size:13px;
 	}
 
-	#page3 .bubble.bottom .needle,
-	#page3 .bubble.botTag .needle  {
+	#page3 .bubble.bottom .needle {
 		top: -75px;
 	}
 
-	#page3 .bubble.bottom,
-	#page3 .bubble.botTag  {
+	#page3 .bubble.bottom  {
 		margin-top: 254px;
 	}
 
@@ -645,20 +669,8 @@ footer {
 	}
 }
 
-@media(max-width: 600px) {
+@media(max-width: 600px), (max-height:600px) {
 
-	#page3 .bubble.botTag {
-		margin-top: 20px;
-	}
-
-	#page3 .bubble.botTag .needle {
-		top:80px;
-	}
-
-	#page3 .botTag .needle .pointer {
-		bottom: auto;
-		top: 70px;
-	}
 
 	header {
 		height: 50px;
@@ -705,19 +717,48 @@ footer {
 		padding-top:50px;
 	}
 
+	.content-box {
+		margin-bottom:20px;
+	}
+
 	#page1 .picture {
-		margin-top:30px;
+		margin-top:10px;
+	}
+
+	#page1 .picture img {
+		margin-top:10px;
+		width:120px;
 	}
 
 	#page1 .name {
-		font-size:60px;
+		font-size:40px;
+		line-height: 45px;
+		margin-top: 0px;
+	}
+
+	#page1 .subtitle {
+		font-size: 16px;
+		line-height: 20px;
+		width: 173px;
+	}
+
+	#page1 .description {
+		margin-bottom: 10px; //change this
 	}
 
 	#page1 .description p {
-		width: 300px;
-		margin: 0 auto;
+		width: auto;
+		max-width:300px;
 		margin-top:60px;
 		margin-bottom:30px;
+		padding: 10px;
+		margin: 10px auto 0px auto;
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	#page1 .description a {
+		font-size: 18px;
 	}
 
 	#page3 {
@@ -738,6 +779,42 @@ footer {
 }
 
 @media(max-width: 400px) {
+	.content-box {
+		margin-bottom:10px;
+	}
+
+	#page1 .picture img {
+		width:100px;
+	}
+
+	#page1 .name {
+		font-size:30px;
+		line-height: 50px;
+		margin-top: 10px;
+	}
+
+	#page1 .subtitle {
+		font-size: 15px;
+		line-height: 20px;
+		width: 160px;
+	}
+
+	#page1 .description {
+		margin-bottom: 10px; //change this
+	}
+
+	#page1 .description p {
+		width: auto;
+		padding: 10px;
+		margin: 10px auto 0px auto;
+		font-size: 13px;
+		line-height: 14px;
+	}
+
+	#page1 .description a {
+		font-size: 18px;
+	}
+
 	#page3 {
 		width:200%;
 	}
@@ -745,35 +822,5 @@ footer {
 	#page4 {
 		left:400%;
 	}
-
-	/*#page3 .bubble.toggle {
-		width:200px;
-	}
-
-	#page3 .bubble.toggle .bubbleContent {
-		width:180px;
-	}
-
-	#page3 .bubbleContent {
-		margin:10px;
-	}
-
-	#page3 .bubble.toggle .header {
-		width:102px;
-	}
-
-	#page3 .bubble {
-		margin-left: 84px;
-	}
-
-	#page3 .needle {
-		width:85px;
-	}
-
-	#page3 .bubble .needle {
-		left: -85px;
-		font-size: 12px;
-	}*/
-
 }
 
