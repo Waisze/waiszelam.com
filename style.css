@@ -369,10 +369,6 @@ header {
 	}
 
 /*PAGE 3*/
-#page3 #contentRow {
-	margin: 5px 10px 100px 0;
-}
-
 #page3 .timeline {
 	position:absolute;
 	width:100%;
