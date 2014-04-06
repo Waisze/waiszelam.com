@@ -7,6 +7,7 @@
 
 		<!--Google Fonts -->
 		<link href = "http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300" rel="stylesheet" type ="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="style.css" />
@@ -69,7 +70,68 @@
 						</div>
 					</li>
 					<li class="page" id="page2">
-						<div class="contentContainer"></div>
+						<div class="contentContainer">
+							<div class="cardContainer" id="cardHobby" onclick="this.classList.toggle('toggle');">
+								<div class="card">
+									<div class="front">
+										<!-- front content -->
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+											<defs>
+												<pattern id="fabricPattern" patternUnits="userSpaceOnUse" width="400" height="400">
+													<image xlink:href="images/fabric.png" width="400" height="300" preserveAspectRatio="none"></image>
+												</pattern>
+											</defs>
+											<text x="5" y="180" font-size="100" fill="url(#fabricPattern)" font-weight="bold">Hobbies</text>
+										</svg>
+									</div>
+									<div class="back">
+										<!-- back content -->
+										b
+									</div>
+								</div>
+							</div>
+							<div class="cardContainer" id="cardSkills" onclick="this.classList.toggle('toggle');">
+								<div class="card">
+									<div class="front">
+										<!-- front content -->
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+											<defs>
+												<pattern id="burned" patternUnits="userSpaceOnUse" width="400" height="400">
+													<image xlink:href="images/burned.png" width="400" height="300" preserveAspectRatio="none"></image>
+												</pattern>
+											</defs>
+											<text x="65" y="180" font-size="100" fill="url(#burned)" font-weight="bold">Skills</text>
+										</svg>
+									</div>
+									<div class="back">
+										<!-- back content -->
+										d
+									</div>
+								</div>
+							</div>
+
+								<div class="clearFloat plus600"></div>
+							<div class="cardContainer" id="cardEdu" onclick="this.classList.toggle('toggle');">
+								<div class="card">
+									<div class="front">
+										<!-- front content -->
+										<svg width="400" height="300">
+											<defs>
+												<pattern id="redox" patternUnits="userSpaceOnUse" width="400" height="300">
+													<image xlink:href="images/fabric5.jpg" width="400" height="300" preserveAspectRatio="none" style="background-repeat:repeat"></image>
+												</pattern>
+											</defs>
+											<text  x="7" y="180" font-size="80"fill="url(#redox)" font-weight="bold">Education</text>
+										</svg>
+									</div>
+									<div class="back">
+										<!-- back content -->
+										d
+									</div>
+								</div> 
+							</div>
+
+						</div>
 					</li>
 					<li class="page" id="page3">
 						<div class="contentContainer">
