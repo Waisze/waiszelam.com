@@ -416,6 +416,11 @@ header {
 		border-radius:10px;
 	}
 
+		.front .text{
+			font-size:100px;
+			font-weight:bold;
+		}
+
 	/* front pane, placed above back */
 	.front {
 		z-index: 2;
@@ -433,11 +438,11 @@ header {
 	}
 
 		#cardHobby .front {
-			background: url('images/redox.png');
+			background: url('images/paper.png');
 		}
 
 	#cardSkills {
-		margin-left:200px;
+		margin-left:180px;
 		margin-top:20px;
 	}
 
@@ -448,13 +453,18 @@ header {
 
 
 	#cardEdu {
-		margin-left:350px;
+		margin-left:300px;
 		margin-top:30px;
 	}
 
 		#cardEdu .front {
 			background: url('images/cloth.png');
 		}
+
+	#cardEdu .text{
+		font-size:80px;
+		font-weight:bold;
+	}
 
 
 
@@ -627,6 +637,38 @@ footer {
 				color:#72d0b9;
 			}
 
+@media(max-height:900px),(max-width:1000px) {
+	#page1 .picture {
+		margin-top: 60px;
+	}
+
+
+	#page2 .contentContainer {
+		margin-top:10px;
+	}
+	#cardSkills {
+		margin-left: 40px;
+		margin-top: 10px;
+	}
+
+	#cardEdu {
+		margin-left: 180px;
+		margin-top: 20px;
+	}
+
+	.cardContainer, .front, .back {
+		width:350px;
+	}
+
+	.front .text {
+		font-size: 87px;
+	}
+
+	#cardEdu .text {
+		font-size: 70px;
+	}
+}
+
 /*RWD*/
 @media(max-height:825px),(max-width: 750px) {
 	header {
@@ -674,6 +716,14 @@ footer {
 }
 
 @media(max-height:750px),(max-width: 750px) {
+	#page2 {
+		width: 130%;
+	}
+
+	#page3 {
+		left:230%;
+	}
+
 	#page3 .bubble.botTag {
 		margin-top: 20px;
 	}
@@ -686,12 +736,26 @@ footer {
 		bottom: auto;
 		top: 70px;
 	}
+
+	#page4 {
+		left:330%;
+	}
 }
 
-@media(max-width:750px), (max-height:600px) {
+@media(max-height:600px), (max-width:750px) {
 
 	.plus600 {
 		display:none;
+	}
+
+	#cardSkills {
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+
+	#cardEdu {
+		margin-left: 20px;
+		margin-top: 0px;
 	}
 
 	#page3 #contentRow {
@@ -855,12 +919,22 @@ footer {
 		font-size: 18px;
 	}
 
+	.cardContainer, .front, .back {
+		width: 350px;
+		height: 216px;
+	}
+
+	#page2 {
+		width:200%;
+	}
+
 	#page3 {
 		width:160%;
+		left:300%;
 	}
 
 	#page4 {
-		left:360%;
+		left:460%;
 	}
 
 	footer {
@@ -872,7 +946,7 @@ footer {
 		}
 }
 
-@media(max-width: 400px) {
+@media(max-height:400px),(max-width: 400px) {
 	.content-box {
 		margin-bottom:10px;
 	}
@@ -909,12 +983,41 @@ footer {
 		font-size: 18px;
 	}
 
+	#page2 {
+		width:300%;
+	}
+
+	.cardContainer, .front, .back {
+		width: 300px;
+		height: 240px;
+	}
+
+	.front .text {
+		font-size: 75px;
+	}
+
+	#cardEdu .text {
+		font-size: 60px;
+	}
+
+	#cardSkills {
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+
+	#cardEdu {
+		margin-left: 20px;
+		margin-top: 0px;
+	}
+
+
 	#page3 {
 		width:200%;
+		left: 400%;
 	}
 
 	#page4 {
-		left:400%;
+		left:600%;
 	}
 }
 
