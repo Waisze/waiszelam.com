@@ -19,237 +19,232 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 	</head>
 
-	<body>
-		<div class="main-wrapper">			
-			<header class="header">
-				<div class="headerContainer">
-					<div class="logo" id="logo"><a  id="navItem1" href="#page1"><b>W</b>AISZE <b>L</b>AM<a></div>
+	<body>		
+		<header class="header">
+			<div class="headerContainer">
+				<div class="logo" id="logo"><a  id="navItem1" href="#page1"><b>W</b>AISZE <b>L</b>AM<a></div>
 
-					<ul class="navContainer">
-						<li class="navItem"><a id="navItem2" href="#page2">About Me</a></li>
-						<li class="navItem"><a id="navItem3" href="#page3">Portfolio</a></li>
-						<li class="navItem"><a id="navItem4" href="#page4">Contact</a></li>
-						<li id="mobileDropdownIcon" onclick="toggle('#mobileDropdown');"><i class="fa fa-bars"></i></li>
-					</ul>
-
-					<div class="clearFloat"></div>
-				</div>
-				<div id="mobileDropdown">
-					<ul>
-						<li><a href="#page2" id="navMobileItem2" onclick="toggle('#mobileDropdown');">About Me</a></li>
-						<li><a href="#page3" id="navMobileItem3" onclick="toggle('#mobileDropdown');">Portfolio</a></li>
-						<li><a href="#page4" id="navMobileItem4" onclick="toggle('#mobileDropdown');">Contact</a></li>
-					</ul>
-
-				</div>
-			</header>
-
-			<div class="content">
-				<ul>
-					<li class="page home" id="page1">
-						<div class="contentContainer">
-							<div class="col12 picture">
-								<img src="images/me.jpg"></img>
-							</div>
-
-							<div class="col12 name">
-								Waisze Lam
-							</div>
-
-							<div class="col12 subtitle">
-								<b>Noun</b> [ w&#299; z&#275; ]<br>
-								<b>1.</b> Web Developer.<br>
-								<b>2.</b> Software Engineer.<br>
-								<b>3.</b> Designer.<br>
-							</div>
-
-							<div class="col12 description">
-								<p>Welcome! This site is currently under development. In the meantime, feel free to grab a copy of my resume!</p>
-								<a href="waisze.pdf" target="_blank">VIEW RESUME</a>
-							</div>
-						</div>
-					</li>
-					<li class="page" id="page2">
-						<div class="contentContainer">
-							<div class="cardContainer" id="cardHobby" onclick="this.classList.toggle('toggle');">
-								<div class="card">
-									<div class="front">
-										<!-- front content -->
-										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
-											<defs>
-												<pattern id="foodPattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
-													<image xlink:href="images/food.png" width="100%" height="100%" preserveAspectRatio="none"></image>
-												</pattern>
-											</defs>
-											<text class="text" x="2%" y="60%" fill="url(#foodPattern)">Hobbies</text>
-										</svg>
-									</div>
-									<div class="back">
-										<!-- back content -->
-										b
-									</div>
-								</div>
-							</div>
-							<div class="cardContainer" id="cardSkills" onclick="this.classList.toggle('toggle');">
-								<div class="card">
-									<div class="front">
-										<!-- front content -->
-										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
-											<defs>
-												<pattern id="burned" patternUnits="userSpaceOnUse" width="100%" height="100%">
-													<image xlink:href="images/burned.jpg" width="100%" height="100%" preserveAspectRatio="none"></image>
-												</pattern>
-											</defs>
-											<text class="text" x="17%" y="60%" fill="url(#burned)" font-weight="bold">Skills</text>
-										</svg>
-									</div>
-									<div class="back">
-										<!-- back content -->
-										d
-									</div>
-								</div>
-							</div>
-
-							<div class="clearFloat plus600"></div>
-							
-							<div class="cardContainer" id="cardEdu" onclick="this.classList.toggle('toggle');">
-								<div class="card">
-									<div class="front">
-										<!-- front content -->
-										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
-											<defs>
-												<pattern id="redox" patternUnits="userSpaceOnUse" width="100%" height="100%">
-													<image xlink:href="images/fabric5.jpg" width="100%" height="100%" preserveAspectRatio="none" style="background-repeat:repeat"></image>
-												</pattern>
-											</defs>
-											<text class="text" x="2%" y="60%" fill="url(#redox)" font-weight="bold">Education</text>
-										</svg>
-									</div>
-									<div class="back">
-										<!-- back content -->
-										d
-									</div>
-								</div> 
-							</div>
-							<div class="clearFloat"></div>
-						</div>
-					</li>
-					<li class="page" id="page3">
-						<div class="contentContainer">
-							<div class="row">
-								<div class="col12">
-									<div class="content-box">
-										<div class="timeline"></div>
-
-										<div class="bubble toggle" id="bubbleWaisze" onclick="toggle('#bubbleWaisze');">
-											<div class="needle">
-												<!--2014-->
-												<div class="pointer"></div>
-											</div>
-											<div class="thumbnail">
-												<img src="images/me.jpg"></img>
-											</div>
-											<div class="header">WaiszeLam.com</div>
-											<div class="clearFloat"></div>
-											<div class="bubbleContent">
-												<div class="description">Implemented a personal website with best practices and custom functionalities using HTML, CSS and jQuery. You're already checking it out!</div>
-												<div class="clearFloat"></div>
-											</div>
-											<div class="clearFloat"></div>
-										</div>
-
-										<div class="bubble bottom" id="bubbleEvento" onclick="toggle('#bubbleEvento');">
-											<div class="needle">
-												<!--2013-2014-->
-												<div class="pointer"></div>
-											</div>
-											<div class="thumbnail">
-												<img src="images/evento.png"></img>
-											</div>
-											<div class="header">Evento</div>
-											<div class="clearFloat"></div>
-											<div class="bubbleContent">
-												<div class="description">
-												Worked on full-stack development of the web application Evento. This Toronto-based events aggregate suggests events to users using machine learning.</div>
-												<div class="clearFloat"></div>
-											</div>
-										</div>
-
-										<div class="bubble bottom" id="bubbleIBM" onclick="toggle('#bubbleIBM');">
-											<div class="needle">
-												<!--2012-2014-->
-												<div class="pointer"></div>
-											</div>
-											<div class="thumbnail">
-												<img src="images/IBM.jpg"></img>
-											</div>
-											<div class="header">IBM</div>
-											<div class="clearFloat"></div>
-											<div class="bubbleContent">
-												<div class="description">Aquired professional experience as an UI Web Developer for two years. Handled front-end web development of responsive UIs for e-commerce store models.
-												</div>
-												<div class="clearFloat"></div>
-											</div>
-										</div>
-
-										<div class="bubble" id="bubbleOEC" onclick="toggle('#bubbleOEC');">
-											<div class="needle">
-												<!--2011-2012-->
-												<div class="pointer"></div>
-											</div>
-											<div class="thumbnail">
-												<img src="images/OEC2012.png"></img>
-											</div>
-											<div class="header">Ontario <br>Engineering <br> Competitions</div>
-											<div class="clearFloat"></div>
-											<div class="bubbleContent">
-												<div class="description">Served as Vice President Communications for one year. Oversaw outgoing communications and managed the official competitions website.
-												</div>
-												<div class="clearFloat"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="clearFloat"></div>
-							</div>
-						</div>
-					</li>
-					<li class="page" id="page4">
-						<div class="contentContainer"></div>
-					</li>
-					<div class="clearFloat"></div>
+				<ul class="navContainer">
+					<li class="navItem"><a id="navItem2" href="#page2">About Me</a></li>
+					<li class="navItem"><a id="navItem3" href="#page3">Portfolio</a></li>
+					<li class="navItem"><a id="navItem4" href="#page4">Contact</a></li>
+					<li id="mobileDropdownIcon" onclick="toggle('#mobileDropdown');"><i class="fa fa-bars"></i></li>
 				</ul>
-			</div>
 
-			<footer>
-				<div class="footerContainer">
-					<div class="row">
-						<div class="col3 icon" target="_blank">
-							<a href="mailto:lam.waisze@gmail.com">
-								<i class="fa fa-envelope"></i>
-							</a>
-						</div>
-						<div class="col3 icon">
-							<a href="waisze.pdf" target="_blank">
-								<i class="fa fa-file-text"></i>
-							</a>
-						</div>
-						<div class="col3 icon" target="_blank">
-							<a href="http://linkedin.waiszelam.com">
-								<i class="fa fa-linkedin"></i>
-							</a>
-						</div>
-						<div class="col3 icon" target="_blank">
-							<a href="https://github.com/Waisze">
-								<i class="fa fa-github"></i>
-							</a>
-						</div>
+				<div class="clearFloat"></div>
+			</div>
+			<div id="mobileDropdown">
+				<ul>
+					<li><a href="#page2" id="navMobileItem2" onclick="toggle('#mobileDropdown');">About Me</a></li>
+					<li><a href="#page3" id="navMobileItem3" onclick="toggle('#mobileDropdown');">Portfolio</a></li>
+					<li><a href="#page4" id="navMobileItem4" onclick="toggle('#mobileDropdown');">Contact</a></li>
+				</ul>
+
+			</div>
+		</header>
+
+		<div class="content">
+			<li class="page home" id="page1">
+				<div class="contentContainer">
+					<div class="col12 picture">
+						<img src="images/me.jpg"></img>
+					</div>
+
+					<div class="col12 name">
+						Waisze Lam
+					</div>
+
+					<div class="col12 subtitle">
+						<b>Noun</b> [ w&#299; z&#275; ]<br>
+						<b>1.</b> Web Developer.<br>
+						<b>2.</b> Software Engineer.<br>
+						<b>3.</b> Designer.<br>
+					</div>
+
+					<div class="col12 description">
+						<p>Welcome! This site is currently under development. In the meantime, feel free to grab a copy of my resume!</p>
+						<a href="waisze.pdf" target="_blank">VIEW RESUME</a>
 					</div>
 				</div>
-			</footer>
-			
-			<div class="clearFloat"></div>
+			</li>
+			<li class="page" id="page2">
+				<div class="contentContainer">
+					<div class="cardContainer" id="cardHobby" onclick="this.classList.toggle('toggle');">
+						<div class="card">
+							<div class="front">
+								<!-- front content -->
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
+									<defs>
+										<pattern id="foodPattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
+											<image xlink:href="images/food.png" width="100%" height="100%" preserveAspectRatio="none"></image>
+										</pattern>
+									</defs>
+									<text class="text" x="2%" y="60%" fill="url(#foodPattern)">Hobbies</text>
+								</svg>
+							</div>
+							<div class="back">
+								<!-- back content -->
+								b
+							</div>
+						</div>
+					</div>
+					<div class="cardContainer" id="cardSkills" onclick="this.classList.toggle('toggle');">
+						<div class="card">
+							<div class="front">
+								<!-- front content -->
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
+									<defs>
+										<pattern id="burned" patternUnits="userSpaceOnUse" width="100%" height="100%">
+											<image xlink:href="images/burned.jpg" width="100%" height="100%" preserveAspectRatio="none"></image>
+										</pattern>
+									</defs>
+									<text class="text" x="17%" y="60%" fill="url(#burned)" font-weight="bold">Skills</text>
+								</svg>
+							</div>
+							<div class="back">
+								<!-- back content -->
+								d
+							</div>
+						</div>
+					</div>
+
+					<div class="clearFloat plus600"></div>
+					
+					<div class="cardContainer" id="cardEdu" onclick="this.classList.toggle('toggle');">
+						<div class="card">
+							<div class="front">
+								<!-- front content -->
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
+									<defs>
+										<pattern id="redox" patternUnits="userSpaceOnUse" width="100%" height="100%">
+											<image xlink:href="images/fabric5.jpg" width="100%" height="100%" preserveAspectRatio="none" style="background-repeat:repeat"></image>
+										</pattern>
+									</defs>
+									<text class="text" x="2%" y="60%" fill="url(#redox)" font-weight="bold">Education</text>
+								</svg>
+							</div>
+							<div class="back">
+								<!-- back content -->
+								d
+							</div>
+						</div> 
+					</div>
+					<div class="clearFloat"></div>
+				</div>
+			</li>
+			<li class="page" id="page3">
+				<div class="contentContainer">
+					<div class="row">
+						<div class="col12">
+							<div class="content-box">
+								<div class="timeline"></div>
+
+								<div class="bubble toggle" id="bubbleWaisze" onclick="toggle('#bubbleWaisze');">
+									<div class="needle">
+										<!--2014-->
+										<div class="pointer"></div>
+									</div>
+									<div class="thumbnail">
+										<img src="images/me.jpg"></img>
+									</div>
+									<div class="header">WaiszeLam.com</div>
+									<div class="clearFloat"></div>
+									<div class="bubbleContent">
+										<div class="description">Implemented a personal website with best practices and custom functionalities using HTML, CSS and jQuery. You're already checking it out!</div>
+										<div class="clearFloat"></div>
+									</div>
+									<div class="clearFloat"></div>
+								</div>
+
+								<div class="bubble bottom" id="bubbleEvento" onclick="toggle('#bubbleEvento');">
+									<div class="needle">
+										<!--2013-2014-->
+										<div class="pointer"></div>
+									</div>
+									<div class="thumbnail">
+										<img src="images/evento.png"></img>
+									</div>
+									<div class="header">Evento</div>
+									<div class="clearFloat"></div>
+									<div class="bubbleContent">
+										<div class="description">
+										Worked on full-stack development of the web application Evento. This Toronto-based events aggregate suggests events to users using machine learning.</div>
+										<div class="clearFloat"></div>
+									</div>
+								</div>
+
+								<div class="bubble bottom" id="bubbleIBM" onclick="toggle('#bubbleIBM');">
+									<div class="needle">
+										<!--2012-2014-->
+										<div class="pointer"></div>
+									</div>
+									<div class="thumbnail">
+										<img src="images/IBM.jpg"></img>
+									</div>
+									<div class="header">IBM</div>
+									<div class="clearFloat"></div>
+									<div class="bubbleContent">
+										<div class="description">Aquired professional experience as an UI Web Developer for two years. Handled front-end web development of responsive UIs for e-commerce store models.
+										</div>
+										<div class="clearFloat"></div>
+									</div>
+								</div>
+
+								<div class="bubble" id="bubbleOEC" onclick="toggle('#bubbleOEC');">
+									<div class="needle">
+										<!--2011-2012-->
+										<div class="pointer"></div>
+									</div>
+									<div class="thumbnail">
+										<img src="images/OEC2012.png"></img>
+									</div>
+									<div class="header">Ontario <br>Engineering <br> Competitions</div>
+									<div class="clearFloat"></div>
+									<div class="bubbleContent">
+										<div class="description">Served as Vice President Communications for one year. Oversaw outgoing communications and managed the official competitions website.
+										</div>
+										<div class="clearFloat"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearFloat"></div>
+					</div>
+				</div>
+			</li>
+			<li class="page" id="page4">
+				<div class="contentContainer"></div>
+			</li>
 		</div>
+
+		<footer>
+			<div class="footerContainer">
+				<div class="row">
+					<div class="col3 icon" target="_blank">
+						<a href="mailto:lam.waisze@gmail.com">
+							<i class="fa fa-envelope"></i>
+						</a>
+					</div>
+					<div class="col3 icon">
+						<a href="waisze.pdf" target="_blank">
+							<i class="fa fa-file-text"></i>
+						</a>
+					</div>
+					<div class="col3 icon" target="_blank">
+						<a href="http://linkedin.waiszelam.com">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</div>
+					<div class="col3 icon" target="_blank">
+						<a href="https://github.com/Waisze">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<div class="clearFloat"></div>
 	</body>
 
 	<script>

@@ -238,15 +238,14 @@ header {
 
 
 .content {
-	width:100%;
-	height:100%;
-	overflow-x:hidden;
+	width:400vw;
 }
 
 	.page {
-		position:absolute;
-		width: 100%;
-		height: 100%;
+		position:relative;
+		float:left;
+		width: 100vw;
+		height: 100vh;
 		z-index:-1;
 		list-style: none;
 		transition:2s;
@@ -254,51 +253,53 @@ header {
 
 	#page1 {
 		background:-moz-linear-gradient(
-								left, rgba(161,196,166,1) 0%, 
-								rgba(125,185,232,0) 98%
-							);
+			left, rgba(161,196,166,1) 0%, 
+			rgba(125,185,232,0) 98%
+		);
 		background:-webkit-gradient(
-								linear, left top, right top, 
-								color-stop(0%,rgba(161,196,166,1)), 
-								color-stop(98%,rgba(125,185,232,0))
-							);
+			linear, left top, right top, 
+			color-stop(0%,rgba(161,196,166,1)), 
+			color-stop(98%,rgba(125,185,232,0))
+		);
 		background:-webkit-linear-gradient(
-								left, rgba(161,196,166,1) 0%,
-								rgba(125,185,232,0) 98%
-							); 
+			left, rgba(161,196,166,1) 0%,
+			rgba(125,185,232,0) 98%
+		); 
 		background: -o-linear-gradient(
-								left, rgba(161,196,166,1) 0%,
-								rgba(125,185,232,0) 98%
-							);
-		left:0%;
+			left, rgba(161,196,166,1) 0%,
+			rgba(125,185,232,0) 98%
+		);
+		//left:0%;
 	}
 	#page2 {
 		//background: rgba(221,244,203,0.2);
-		left:100%;
+		//left:100%;
+		max-width:1000px;
 	}
 	#page3 {
 		//background: rgba(242,226,203,0.2);
-		left:200%;
+		//left:200%;
+		max-width:1000px;
 	}
 	#page4 { 
 		background:-moz-linear-gradient(
-							left, rgba(30,87,153,0) 2%, 
-							rgba(161,196,166,1) 100%
-						);
+			left, rgba(30,87,153,0) 2%, 
+			rgba(161,196,166,1) 100%
+		);
 		background: -webkit-gradient(
-							linear, left top, right top, 
-							color-stop(2%,rgba(30,87,153,0)), 
-							color-stop(100%,rgba(161,196,166,1))
-						);
+			linear, left top, right top, 
+			color-stop(2%,rgba(30,87,153,0)), 
+			color-stop(100%,rgba(161,196,166,1))
+		);
 		background: -webkit-linear-gradient(
-							left, rgba(30,87,153,0) 2%,
-							rgba(161,196,166,1) 100%
-						);
+			left, rgba(30,87,153,0) 2%,
+			rgba(161,196,166,1) 100%
+		);
 		background: -o-linear-gradient(
-							left, rgba(30,87,153,0) 2%,
-							rgba(161,196,166,1) 100%
-						);
-		left:300%;
+			left, rgba(30,87,153,0) 2%,
+			rgba(161,196,166,1) 100%
+		);
+		//left:300%;
 	}
 	#page5 { 
 		background: rgba(0,209,164,1); 
@@ -642,6 +643,9 @@ footer {
 		margin-top: 60px;
 	}
 
+	#page2 {
+		max-width: 760px;
+	}
 
 	#page2 .contentContainer {
 		margin-top:10px;
@@ -716,12 +720,11 @@ footer {
 }
 
 @media(max-height:750px),(max-width: 750px) {
-	#page2 {
-		width: 130%;
+	.content {
+		width: 450vw;
 	}
-
-	#page3 {
-		left:230%;
+	#page2 {
+		width: 130vw;
 	}
 
 	#page3 .bubble.botTag {
@@ -735,10 +738,6 @@ footer {
 	#page3 .botTag .needle .pointer {
 		bottom: auto;
 		top: 70px;
-	}
-
-	#page4 {
-		left:330%;
 	}
 }
 
@@ -754,8 +753,8 @@ footer {
 	}
 
 	#cardEdu {
-		margin-left: 20px;
-		margin-top: 0px;
+		margin-left: 200px;
+		margin-top: 20px;
 	}
 
 	#page3 #contentRow {
@@ -828,7 +827,9 @@ footer {
 }
 
 @media(max-width: 600px), (max-height:600px) {
-
+	.content {
+		width: 640vw;
+	}
 
 	header {
 		height: 50px;
@@ -925,16 +926,12 @@ footer {
 	}
 
 	#page2 {
-		width:200%;
+		width: 280vw;
+		max-width: 1100px;
 	}
 
 	#page3 {
-		width:160%;
-		left:300%;
-	}
-
-	#page4 {
-		left:460%;
+		width:160vw;
 	}
 
 	footer {
@@ -947,6 +944,10 @@ footer {
 }
 
 @media(max-height:400px),(max-width: 400px) {
+	.content {
+		width: 740vw;
+	}
+
 	.content-box {
 		margin-bottom:10px;
 	}
@@ -984,7 +985,8 @@ footer {
 	}
 
 	#page2 {
-		width:300%;
+		width:340vw;
+		max-width: 980px;
 	}
 
 	.cardContainer, .front, .back {
@@ -1010,14 +1012,9 @@ footer {
 		margin-top: 0px;
 	}
 
-
 	#page3 {
-		width:200%;
-		left: 400%;
+		width:200vw;
 	}
 
-	#page4 {
-		left:600%;
-	}
 }
 
